@@ -6,6 +6,6 @@ Même si on voit que vous utilisez Ajax et des promesses, il faudra ajouter des 
 Reste a faire : 
 - Amelioration de l'application :
       - Correction du beug : Nathan
-      - Prevision sur la semaine :Sihya
-      - Ajout d'images, icônes et fonctionnalités :
+      - Prevision sur la semaine : Sihya
+      - Ajout d'images, icônes (css) : Ines
       - Ajout d'idées : 
