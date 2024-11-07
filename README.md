@@ -5,7 +5,12 @@ Même si on voit que vous utilisez Ajax et des promesses, il faudra ajouter des 
 
 Reste a faire : 
 - Amelioration de l'application :
-      - Correction du beug : Nathan
-      - Prevision sur la semaine : Sihya
-      - Ajout d'images, icônes (css) : Ines
-      - Ajout d'idées : 
+
+- Correction du beug : Nathan
+La couleur du cadre s'adapte désormais au contenu de la description, mais je ne sais pas si ca rend vraiment bien.
+Les espaces avant les données ont été ajoutés
+Proposition de détail : modifier les icones humidité, ressenti , vent, et... pour mettre des icones plus colorées.
+
+- Prevision sur la semaine : Sihya
+- Ajout d'images, icônes (css) : Ines
+- Ajout d'idées : 
