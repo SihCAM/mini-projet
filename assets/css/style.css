@@ -18,7 +18,7 @@
     display: none;
   }
   #weather-container span:not(#wind-speed-kmh) {
-    margin-left: 5px; /* Ajuste la valeur selon tes besoins */ 
+    margin-left: 5px; 
   }
   #city-name {
     font-size: 1.8em;
@@ -41,7 +41,7 @@
     vertical-align: middle;
   }
   .weather-info {
-    margin: 10px 0; /* Augmentation de l'espacement vertical */
+    margin: 10px 0;
     font-size: 1.1em;
     display: flex;
     align-items: center;

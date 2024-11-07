@@ -34,20 +34,23 @@ const API_KEY = '011f35a3896b2ee1e0d4b4c075b3615b';
 
     function setBackgroundColor(description) {
       const container = $('#weather-container');
-      if (description.includes("clear")) {
-        container.css('background-color', '#81d4fa'); // Ciel clair
-      } else if (description.includes("cloud")) {
-        container.css('background-color', '#b0bec5'); // Nuageux
-      } else if (description.includes("rain") || description.includes("shower")) {
-        container.css('background-color', '#a5d6a7'); // Pluvieux
-      } else if (description.includes("snow")) {
-        container.css('background-color', '#ffffff'); // Neigeux
-      } else if (description.includes("thunderstorm")) {
-        container.css('background-color', '#ef5350'); // Orageux
+      if (description.includes("orage")) {
+          container.css('background-color', '#FFAB91'); // Orageux (Pale Coral)
+      } else if (description.includes("pluie") || description.includes("shower")) {
+          container.css('background-color', '#B2EBF2'); // Pluvieux (Pale Light Blue)
+      } else if (description.includes("dégagé")) {
+          container.css('background-color', '#B3E5FC'); // Ciel clair (Pale Sky Blue)
+      } else if (description.includes("couvert") || description.includes("nuageux")) {
+          container.css('background-color', '#CFD8DC'); // Nuageux or Couvert (Pale Grey)
+      } else if (description.includes("neige")) {
+          container.css('background-color', '#F0F4C3'); // Neigeux (Pale Light Yellow)
       } else {
-        container.css('background-color', '#ffffff'); // Couleur par défaut
+          container.css('background-color', '#FFFFFF'); // Couleur par défaut (Default Color)
       }
     }
+  
+  
+  
 
     $('#weather-form').on('submit', function (event) {
       event.preventDefault();
