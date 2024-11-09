@@ -32,25 +32,74 @@ const API_KEY = '011f35a3896b2ee1e0d4b4c075b3615b';
       });
     }
 
-    function setBackgroundColor(description) {
-      const container = $('#weather-container');
-      if (description.includes("orage")) {
-          container.css('background-color', '#FFAB91'); // Orageux (Pale Coral)
-      } else if (description.includes("pluie") || description.includes("shower")) {
-          container.css('background-color', '#B2EBF2'); // Pluvieux (Pale Light Blue)
-      } else if (description.includes("dégagé")) {
-          container.css('background-color', '#B3E5FC'); // Ciel clair (Pale Sky Blue)
-      } else if (description.includes("couvert") || description.includes("nuageux")) {
-          container.css('background-color', '#CFD8DC'); // Nuageux or Couvert (Pale Grey)
-      } else if (description.includes("neige")) {
-          container.css('background-color', '#F0F4C3'); // Neigeux (Pale Light Yellow)
-      } else {
-          container.css('background-color', '#FFFFFF'); // Couleur par défaut (Default Color)
-      }
-    }
-  
-  
-  
+function setBackgroundColor(description) {
+  const container = $('#weather-container');
+  const textColor = $('#weather-container, #main-info, .weather-info'); 
+  const cityName = $('#city-name');
+  const button = $('#toggle-extra-info');
+
+  if (description.includes("orage")) {
+      container.css('background-color', '#FF7043');
+      textColor.css('color', '#FFFFFF');
+      cityName.css('color', '#FFFFFF');
+      button.css({
+        'background-color': '#D84315',
+        'color': '#FFFFFF'
+      });
+      $('.weather-info i').css('color', '#FFFFFF');
+
+  } else if (description.includes("pluie") || description.includes("shower")) {
+      container.css('background-color', '#0288D1');
+      textColor.css('color', '#FFFFFF');
+      cityName.css('color', '#FFFFFF');
+      button.css({
+        'background-color': '#0277BD',
+        'color': '#FFFFFF'
+      });
+      $('.weather-info i').css('color', '#FFFFFF');
+
+  } else if (description.includes("dégagé")) {
+      container.css('background-color', '#4FC3F7');
+      textColor.css('color', '#FFFFFF');
+      cityName.css('color', '#FFFFFF');
+      button.css({
+        'background-color': '#039BE5',
+        'color': '#FFFFFF'
+      });
+      $('.weather-info i').css('color', '#FFFFFF');
+
+  } else if (description.includes("couvert") || description.includes("nuageux")) {
+      container.css('background-color', '#90A4AE');
+      textColor.css('color', '#FFFFFF');
+      cityName.css('color', '#FFFFFF');
+      button.css({
+        'background-color': '#78909C',
+        'color': '#FFFFFF'
+      });
+      $('.weather-info i').css('color', '#FFFFFF');
+
+  } else if (description.includes("neige")) {
+      container.css('background-color', '#B3E5FC');
+      textColor.css('color', '#333333');
+      cityName.css('color', '#333333');
+      button.css({
+        'background-color': '#81D4FA',
+        'color': '#333333'
+      });
+      $('.weather-info i').css('color', '#333333');
+
+  } else {
+      container.css('background-color', '#FFFFFF');
+      textColor.css('color', '#333333');
+      cityName.css('color', '#333333');
+      button.css({
+        'background-color': '#E0E0E0',
+        'color': '#333333'
+      });
+      $('.weather-info i').css('color', '#333333');
+  }
+}
+
 
     $('#weather-form').on('submit', function (event) {
       event.preventDefault();
