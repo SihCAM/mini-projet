@@ -1,76 +1,171 @@
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
-  #weather-container {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #ffffff; /* Couleur de fond par défaut */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    display: none;
-  }
-  #weather-container span:not(#wind-speed-kmh) {
-    margin-left: 5px; 
-  }
-  #city-name {
-    font-size: 1.8em;
-    font-weight: bold;
-  }
-  #main-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.2em;
-  }
-  #temperature {
-    font-size: 3em;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  #weather-icon {
-    width: 80px;
-    height: 80px;
-    vertical-align: middle;
-  }
-  .weather-info {
-    margin: 10px 0;
-    font-size: 1.1em;
-    display: flex;
-    align-items: center;
-  }
-  .weather-info img {
-    margin-right: 8px;
-    width: 24px;
-    height: 24px; 
-  }
-  #extra-info {
-    display: none;
-    font-size: 0.9em;
-    color: #555;
-    text-align: left;
-  }
-  .btn {
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #00796b;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  .btn:hover {
-    background-color: #004d40;
-  }
-  .error {
-    color: red;
-    margin-top: 15px;
-  }
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #00796b;
+}
+
+/* Formulaire de recherche */
+#weather-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+#city {
+  padding: 10px 15px;
+  font-size: 1em;
+  border: 1px solid #00796b;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+#city:focus {
+  border-color: #005a4c;
+  box-shadow: 0 0 5px rgba(0, 150, 136, 0.2);
+}
+
+#weather-form button {
+  padding: 10px 15px;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+#weather-form button:hover {
+  background-color: #005a4c;
+}
+
+/* Espacement des informations météo */
+.weather-info {
+  margin: 15px 0;  /* Augmenter l'espacement entre les informations */
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.weather-info i {
+  margin-right: 12px;  /* Plus d'espace entre l'icône et le texte */
+}
+
+#weather-container {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  display: none;
+}
+
+#extra-info {
+  margin-top: 20px;  /* Plus d'espace au-dessus de "Voir plus" */
+}
+
+#toggle-extra-info {
+  margin-top: 15px; /* Espacement entre le bouton et les infos */
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005a4c;
+}
+
+/* Conteneur de météo */
+#weather-container {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  display: none;
+}
+
+#weather-container span:not(#wind-speed-kmh) {
+  margin-left: 5px; 
+}
+
+#city-name {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #00796b;
+}
+
+#main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+#temperature {
+  font-size: 3em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#weather-icon {
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+}
+
+/* Espacement entre les infos avec icônes */
+.weather-info {
+  margin: 15px 0; /* Marge verticale augmentée entre les infos */
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+}
+
+.weather-info i {
+  margin-right: 8px;
+  color: #00796b;
+  font-size: 1.2em;
+}
+
+.weather-info img {
+  margin-right: 8px;
+  width: 24px;
+  height: 24px; 
+}
+
+#extra-info {
+  display: none;
+  font-size: 0.9em;
+  color: #555;
+  text-align: left;
+  margin-top: 15px; /* Espacement en haut de l'extra-info */
+}
+
+.error {
+  color: red;
+  margin-top: 15px;
+}
