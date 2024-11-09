@@ -52,16 +52,15 @@ h1 {
   background-color: #005a4c;
 }
 
-/* Espacement des informations météo */
 .weather-info {
-  margin: 15px 0;  /* Augmenter l'espacement entre les informations */
+  margin: 15px 0; 
   font-size: 1.1em;
   display: flex;
   align-items: center;
 }
 
 .weather-info i {
-  margin-right: 12px;  /* Plus d'espace entre l'icône et le texte */
+  margin-right: 12px;
 }
 
 #weather-container {
@@ -75,11 +74,11 @@ h1 {
 }
 
 #extra-info {
-  margin-top: 20px;  /* Plus d'espace au-dessus de "Voir plus" */
+  margin-top: 20px;
 }
 
 #toggle-extra-info {
-  margin-top: 15px; /* Espacement entre le bouton et les infos */
+  margin-top: 15px;
 }
 
 .btn {
@@ -137,9 +136,8 @@ h1 {
   vertical-align: middle;
 }
 
-/* Espacement entre les infos avec icônes */
 .weather-info {
-  margin: 15px 0; /* Marge verticale augmentée entre les infos */
+  margin: 15px 0;
   font-size: 1.1em;
   display: flex;
   align-items: center;
@@ -162,7 +160,7 @@ h1 {
   font-size: 0.9em;
   color: #555;
   text-align: left;
-  margin-top: 15px; /* Espacement en haut de l'extra-info */
+  margin-top: 15px;
 }
 
 .error {
