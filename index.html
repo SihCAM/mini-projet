@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prévisions Météo</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
 
-  <h1>Quel temps fait-il aujourd'hui ? </h1>
+  <h1>Quel temps fait-il aujourd'hui ?</h1>
   <p>Sélectionnez une ville pour afficher les prévisions météo du jour :</p>
   <form id="weather-form">
     <input type="text" id="city" placeholder="Nom de la ville" required>
@@ -27,38 +27,36 @@
         <span id="description"></span>
       </div>
       <div class="weather-info">
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/thermometer.png" alt="Thermomètre">
+        <i class="fas fa-thermometer-half"></i>
         Ressenti :<span id="feels-like"></span> °C
       </div>
       <div class="weather-info">
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/water.png" alt="Humidité">
+        <i class="fas fa-tint"></i>
         Humidité :<span id="humidity"></span>%
       </div>
     </div>
     <button id="toggle-extra-info" class="btn">Voir plus</button>
     <div id="extra-info">
       <div class="weather-info">
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/wind.png" alt="Vent">
-        Vitesse du vent :<span id="wind-speed"></span> m/s (<span id="wind-speed-kmh"></span>km/h)
+        <i class="fas fa-wind"></i>
+        Vitesse du vent :<span id="wind-speed"></span> m/s (<span id="wind-speed-kmh"></span> km/h)
       </div>
       <div class="weather-info">
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/compass.png" alt="Direction">
+        <i class="fas fa-compass"></i>
         Direction du vent :<span id="wind-deg"></span>°
       </div>
       <div class="weather-info">
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/sunrise.png" alt="Lever du soleil">
+        <i class="fas fa-sun"></i>
         Lever du soleil :<span id="sunrise"></span>
       </div>
       <div class="weather-info">
-        <img src="https://img.icons8.com/ios-glyphs/30/000000/sunset.png" alt="Coucher de soleil">
+        <i class="fas fa-moon"></i>
         Coucher du soleil :<span id="sunset"></span>
       </div>
     </div>
   </div>
-  <div id="error-message" class="error"></div>
-
   
-
+  <div id="error-message" class="error"></div>
   <script src="assets/librairies/jquery-3.7.1.min.js"></script>
   <script src="assets/js/script.js"></script>
 
