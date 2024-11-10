@@ -12,5 +12,5 @@ Les espaces avant les données ont été ajoutés
 Proposition de détail : modifier les icones humidité, ressenti , vent, et... pour mettre des icones plus colorées.
 
 - Prevision sur la semaine : Sihya
-- Ajout d'images, icônes (css) : Ines
+- Ajout d'images, icônes (css) : Ines (pas d'inspirations pour ce projet, changements apportés : des icônes, des espaces entre les éléments, design de la barre de recherche + changement dans le JS des couleurs qui changent en fonction du temps pour + de contrastes et le rendre le projet plus propre.
 - Ajout d'idées : 
